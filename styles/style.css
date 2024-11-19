@@ -54,8 +54,7 @@ button:disabled {
 }
 
 
-.toast {
-  visibility: hidden;
+/*#toast {
   min-width: 200px;
   min-height: 20px;
   background-color: #084fba;
@@ -69,15 +68,14 @@ button:disabled {
   bottom: 26px;
   font-size: 17px;
   z-index: 1;
-  transform: translateX(-50%); /* Center the toast dynamically */ 
+  transform: translateX(-50%); !* Center the toast dynamically *!
   overflow: hidden;
 }
 
 .show {
-  visibility: visible;
   -webkit-animation: fadein 0.5s, fadeout 0.9s 2.5s;
   animation: fadein 0.5s, fadeout 0.9s 2.5s;
-}
+}*/
 
 #toast {
   position: fixed;

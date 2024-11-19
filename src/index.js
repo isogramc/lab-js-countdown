@@ -16,23 +16,30 @@ function startCountdown(e) {
 
   let counter = 10;
   const timeElement = document.querySelector("#time");
-  const myToast = new Toast("⏰ Final countdown! ⏰");
+  const myToast  = new Toast("⏰ Final countdown! ⏰");
 
-  const myInterval = setInterval(function (){
+  const myInterval = setInterval(decrementTimer, 1000);
+
+  function decrementTimer(){
     if (counter>0) {
       counter -= 1;
+
       startBtn.setAttribute("disabled", "disabled");
+
       if (counter===5) {
-        const myToast = new Toast("Start the engines! 💥");
+
+        const myToast1 = new Toast("Start the engines! 💥");
       }
+
     } else {
-      const myToast = new Toast("Lift off! 🚀");
+
+      const myToast2 = new Toast("Lift off! 🚀");
+
       clearInterval(myInterval);
     }
+
     timeElement.innerHTML = counter;
-  }, 1000);
-
-
+  }
 }
 
 
